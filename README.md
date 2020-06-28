@@ -6,7 +6,7 @@ run `curl localhost:8000/metrics` after following the instructions below
 
 
 ## How to Use
-- Activate the virtualenv ( source `./bin/activate`)
+- Activate the virtualenv ( `source ./bin/activate`)
 - Run the script `python ./network_latency.py`
 - to get results `curl localhost:8000`
 - To build the Container run
