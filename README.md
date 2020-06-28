@@ -1,0 +1,2 @@
+# Prometheus Network Latency check
+
