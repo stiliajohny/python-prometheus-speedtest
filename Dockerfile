@@ -1,5 +1,10 @@
-FROM python:3
-ADD ./network_latency.py /
-RUN pip install tcp_latency flask 
+FROM python:3.8-slim-buster
+
+# Copy script over
+COPY ./network_latency.py /
+# Install dependencies:
+COPY ./requirements.txt /
+RUN pip install -r requirements.txt
+
 CMD [ "python", "./network_latency.py" ] ]
 EXPOSE 8000/tcp

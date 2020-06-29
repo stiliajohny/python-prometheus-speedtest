@@ -3,6 +3,8 @@
 
 from tcp_latency import measure_latency
 import flask
+import speedtest
+from hurry.filesize import size, si
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -10,8 +12,24 @@ app.config["DEBUG"] = True
 
 @app.route('/metrics', methods=['GET'])
 def metrics():
-    google_latency = measure_latency(host='google.com')
-    return "python_network_latency_google {}\n".format(google_latency[0])
+    st = speedtest.Speedtest()
+    download = size(st.download(), system=si)
+    upload = size(st.upload(), system=si)
+    servernames = []
+    st.get_servers(servernames)
+    latency = st.results.ping
+
+    print(latency)
+    print(download)
+    print(upload)
+    print(st.results.ping)
+
+    return (
+        "python_network_latency_speedtest " + str(latency) +
+        "\npython_network_upload_speedtest " + str(upload) +
+        "\npython_network_download_speedtest " + str(download) +
+        "\n"
+    )
 
 
 @app.errorhandler(404)
