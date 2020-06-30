@@ -3,7 +3,7 @@ FROM python:3.8-slim-buster
 # Copy script over
 COPY ./network_latency.py /
 # Install dependencies:
-COPY ./requirements.txt /
+COPY ./requiments.txt /
 RUN pip install -r requirements.txt
 
 CMD [ "python", "./network_latency.py" ] ]
