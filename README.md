@@ -5,6 +5,7 @@ It outputs a Prometheus compatible output
 run `curl localhost:8000/metrics` after following the instructions below
 
 
+
 ## How to Use
 - Activate the virtualenv ( `source ./bin/activate`)
 - Run the script `python ./network_latency.py`
