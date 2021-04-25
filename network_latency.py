@@ -6,7 +6,7 @@ import speedtest
 from hurry.filesize import size, si
 
 app = Flask(__name__)
-app.config["DEBUG"] = True
+app.config["DEBUG"] = False
 
 
 @app.route('/metrics', methods=['GET'])
