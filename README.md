@@ -37,8 +37,9 @@ Get Upload/Download, Latency metrics, for use with prometheus
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-    - [To run it with Python](#to-run-it-with-python)
-    - [To build the Docker Image](#to-build-the-docker-image)
+    - [Run it with Python](#run-it-with-python)
+    - [Build the Docker Image](#build-the-docker-image)
+    - [Pull it from GitHub Container Registry](#pull-it-from-github-container-registry)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
@@ -75,18 +76,25 @@ Get Upload/Download, Latency metrics, for use with prometheus
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-#### To run it with Python
+#### Run it with Python
 
 - Run the script with Python3
   - `$ python3 ./network_latency.py`
 - Get results
   - `$ curl localhost:8000`
 
-#### To build the Docker Image
+#### Build the Docker Image
 - Build the image
   - `$ docker build -t CONTAINER_NAME:vX.Y ./Dockerfile`
 - To run the container
   - `$ docker run -p 8000:8000/tcp ./CONTAINERNAME:vX.Y`
+
+#### Pull it from GitHub Container Registry
+- Pull image from the command line:
+  - `$ docker pull docker.pkg.github.com/stiliajohny/python-prometheus-speedtest/python-prometheus-speedtest:0.0.1aplha`
+
+- Use as base image in DockerFile:
+  - `FROM docker.pkg.github.com/stiliajohny/python-prometheus-speedtest/python-prometheus-speedtest:0.0.1aplha`
 
 
 ---
