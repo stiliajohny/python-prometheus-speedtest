@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/stiliajohny/python-prometheus-speedtest">
-    <img src="https://github.com/stiliajohny/python-prometheus-speedtest/raw/main/.assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/stiliajohny/python-prometheus-speedtest/raw/master/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">python-prometheus-speedtest</h3>
