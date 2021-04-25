@@ -29,16 +29,16 @@ def root():
 
     return '''
         <html>
-        <head>
-        <title>Network Stats Exporter</title>
-        <head>
-        <body>
-        <h1>Network Stats Exporter</h1>
-         <a href="./metrics">Metrics</a>
-         <hr>
-         <h3> Python Application writen in order to export upload, download and ping speeds </br>
-              Author <b> John Stilia </b> </h3>
-        </body>
+            <head>
+                <title>Network Stats Exporter</title>
+            <head>
+            <body>
+                <h1>Network Stats Exporter</h1>
+                <a href="./metrics">Metrics</a>
+                <hr>
+                <h3> Python application written in order to export upload, download and ping speeds </br>
+                Author <b> John Stilia </b> </h3>
+            </body>
         </html>
         '''
 
