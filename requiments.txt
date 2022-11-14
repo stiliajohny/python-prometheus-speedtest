@@ -1,3 +1,4 @@
 Flask==1.1.2
 hurry.filesize==0.9
 speedtest-cli==2.1.2
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
